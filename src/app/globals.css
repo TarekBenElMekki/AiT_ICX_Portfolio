@@ -1,0 +1,118 @@
+﻿@import "tailwindcss";
+
+:root {
+  --background: #f7f8fa;
+  --foreground: #111827;
+
+  --brand-navy: #0d2a5c;
+  --brand-navy-2: #163a78;
+  --brand-navy-soft: #eaf0fb;
+  --brand-red: #d94141;
+  --brand-text: #111827;
+  --brand-muted: #5f6b7a;
+  --brand-border: #e5e7eb;
+  --brand-card: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), Arial, Helvetica, sans-serif;
+}
+
+.section-shell {
+  @apply mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10;
+}
+
+.blue-pattern {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.035), transparent 20%),
+    radial-gradient(circle at 80% 30%, rgba(255,255,255,0.025), transparent 24%),
+    linear-gradient(180deg, #0d2a5c 0%, #163a78 100%);
+}
+
+.pattern-light {
+  background:
+    radial-gradient(circle at 25% 20%, rgba(13,42,92,0.03), transparent 20%),
+    radial-gradient(circle at 75% 30%, rgba(13,42,92,0.025), transparent 22%),
+    linear-gradient(180deg, #f7f8fa 0%, #eef2f7 100%);
+}
+
+.soft-card {
+  background: var(--brand-card);
+  border: 1px solid rgba(17, 24, 39, 0.06);
+  border-radius: 24px;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+}
+
+.glass-shadow {
+  box-shadow:
+    0 10px 24px rgba(15, 23, 42, 0.08),
+    0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+.section-title {
+  @apply text-3xl font-extrabold tracking-tight md:text-5xl;
+}
+
+.section-kicker {
+  @apply text-xs font-semibold uppercase tracking-[0.18em] text-white/70;
+}
+
+.eyebrow-dark {
+  @apply text-xs font-semibold uppercase tracking-[0.18em] text-slate-500;
+}
+
+.copy-lg {
+  @apply text-base leading-8 md:text-lg md:leading-9;
+}
+
+.copy-xl {
+  @apply text-lg leading-8 md:text-[1.3rem] md:leading-10;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-bold text-slate-900 transition hover:-translate-y-0.5;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/15;
+}
+
+.card-radius {
+  @apply rounded-3xl;
+}
+
+.hero-overlay {
+  background:
+    linear-gradient(180deg, rgba(13,42,92,0.38) 0%, rgba(13,42,92,0.28) 35%, rgba(13,42,92,0.62) 100%);
+}
+
+@keyframes tunisia-marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.tunisia-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: tunisia-marquee 28s linear infinite;
+  will-change: transform;
+}
+
+.tunisia-marquee-track:hover {
+  animation-play-state: paused;
+}
