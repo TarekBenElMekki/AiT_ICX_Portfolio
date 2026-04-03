@@ -15,15 +15,43 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://here-tunisia.vercel.app"),
   title: "Here Tunisia",
   description: "Professional tourism and cultural showcase website for Tunisia.",
+
+  icons: {
+    icon: "/favicon.svg",
+  },
+
+  openGraph: {
+    title: "Here Tunisia",
+    description: "Professional tourism and cultural showcase website for Tunisia.",
+    url: "https://here-tunisia.vercel.app",
+    siteName: "Here Tunisia",
+    images: [
+      {
+        url: "/assets/products/Hero_IMG.png",
+        width: 1200,
+        height: 630,
+        alt: "Here Tunisia",
+      },
+    ],
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Here Tunisia",
+    description: "Professional tourism and cultural showcase website for Tunisia.",
+    images: ["/assets/products/Hero_IMG.png"],
+  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body className={`${inter.variable} ${jakarta.variable}`}>
