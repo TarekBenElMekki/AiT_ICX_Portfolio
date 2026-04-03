@@ -22,7 +22,7 @@ export function KitchenSection() {
   };
 
   const sideCardClass = useMemo(
-    () => "hidden lg:block rounded-[24px] border-[6px] border-[#163a78] bg-white shadow-xl",
+    () => "hidden lg:block overflow-hidden rounded-[24px] border-[6px] border-[#163a78] bg-white shadow-xl",
     []
   );
 
@@ -54,38 +54,46 @@ export function KitchenSection() {
           </button>
 
           <div className="grid flex-1 items-end gap-5 lg:grid-cols-[0.72fr_1fr_0.72fr]">
-            <div className={sideCardClass}>
+            <div key={`prev-${prev.name}`} className={sideCardClass}>
               <SmartImage
                 src={prev.image}
                 alt={prev.name}
                 width={280}
                 height={210}
-                className="h-[190px] w-full rounded-[18px] object-cover"
+                className="h-[190px] w-full object-cover"
                 seed={`kitchen-prev-${prev.name}`}
               />
             </div>
 
-            <div className="overflow-hidden rounded-[28px] border-[8px] border-[#163a78] bg-[#163a78] shadow-[0_18px_40px_rgba(2,6,23,0.16)]">
+            <div
+              key={`active-card-${active.name}`}
+              className="overflow-hidden rounded-[28px] border-[8px] border-[#163a78] bg-[#163a78] shadow-[0_18px_40px_rgba(2,6,23,0.16)]"
+            >
               <SmartImage
+                key={`active-image-${active.name}`}
                 src={active.image}
                 alt={active.name}
                 width={700}
                 height={460}
                 className="h-[240px] w-full object-cover md:h-[360px]"
                 seed={`kitchen-active-${active.name}`}
+                priority
               />
-              <div className="px-5 py-4 text-center text-2xl font-medium text-white md:text-4xl">
+              <div
+                key={`active-text-${active.name}`}
+                className="px-5 py-4 text-center text-2xl font-medium text-white md:text-4xl"
+              >
                 {active.name}
               </div>
             </div>
 
-            <div className={sideCardClass}>
+            <div key={`next-${next.name}`} className={sideCardClass}>
               <SmartImage
                 src={next.image}
                 alt={next.name}
                 width={280}
                 height={210}
-                className="h-[190px] w-full rounded-[18px] object-cover"
+                className="h-[190px] w-full object-cover"
                 seed={`kitchen-next-${next.name}`}
               />
             </div>

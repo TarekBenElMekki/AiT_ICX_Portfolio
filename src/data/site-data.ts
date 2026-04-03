@@ -31,7 +31,7 @@ export const products = [
   {
     id: "gta",
     name: "Global Talent",
-    accent: "#ff9c2b",
+    accent: "#18c3c8",
     description:
       "Global Talent offers professional internship experiences that help ambitious young people grow through practical work exposure in international settings.",
     extra:
@@ -42,7 +42,7 @@ export const products = [
   {
     id: "gte",
     name: "Global Teacher",
-    accent: "#18c3c8",
+    accent: "#ff9c2b",
     description:
       "Global Teacher enables participants to contribute through education-focused opportunities while discovering new cultures and learning environments.",
     extra:
@@ -82,11 +82,6 @@ export const historyItems = [
     year: "1956",
     title: "Independence",
     text: "Tunisia gained independence and started building its modern national institutions.",
-  },
-  {
-    year: "1987",
-    title: "Political Transition",
-    text: "A new political era began, reshaping governance and public life.",
   },
   {
     year: "2011",

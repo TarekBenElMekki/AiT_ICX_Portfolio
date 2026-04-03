@@ -14,7 +14,10 @@ export function ProductsSection() {
   );
 
   return (
-    <section id="products" className="relative overflow-hidden py-14 text-white md:py-16">
+    <section
+      id="products"
+      className="relative overflow-hidden py-12 text-white sm:py-14 md:py-16 lg:py-20"
+    >
       <SectionBackground
         baseColor="#163f8c"
         patternColor="rgba(255,255,255,0.07)"
@@ -24,32 +27,32 @@ export function ProductsSection() {
       <div className="section-shell relative z-10">
         <div className="mx-auto max-w-3xl text-center">
           <p className="section-kicker">Experiences</p>
-          <h2 className="mt-3 text-3xl font-extrabold tracking-tight md:text-5xl">
+          <h2 className="mt-3 text-2xl font-extrabold tracking-tight sm:text-3xl md:text-5xl">
             Our Products
           </h2>
-          <p className="mt-4 text-sm text-white/72 md:text-base">
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-white/72 sm:text-base sm:leading-7">
             Discover the pathway that best fits the experience you want to present.
           </p>
         </div>
 
-        <div className="mt-12 grid items-center gap-8 lg:grid-cols-[0.95fr_72px_1.05fr] lg:gap-10">
+        <div className="mt-10 grid items-center gap-8 lg:mt-12 lg:grid-cols-[0.95fr_72px_1.05fr] lg:gap-10">
           <div className="order-1 flex items-center justify-center">
-            <div className="relative flex w-full max-w-[420px] items-center justify-center rounded-[24px] bg-white/4 p-4 md:max-w-[460px] md:p-6">
+            <div className="relative flex w-full max-w-[280px] items-center justify-center rounded-[22px] bg-white/5 p-3 sm:max-w-[340px] sm:p-4 md:max-w-[420px] md:rounded-[24px] md:p-5 lg:max-w-[460px] lg:p-6">
               <SmartImage
                 key={activeProduct.id}
                 src={activeProduct.image}
                 alt={activeProduct.name}
                 width={560}
                 height={760}
-                className="h-auto max-h-[360px] w-full object-contain md:max-h-[460px]"
+                className="h-auto max-h-[240px] w-full object-contain sm:max-h-[300px] md:max-h-[360px] lg:max-h-[460px]"
                 seed={`product-main-${activeProduct.id}`}
                 priority
               />
             </div>
           </div>
 
-          <div className="order-2 mx-auto flex items-center justify-center lg:h-full">
-            <div className="relative flex h-[220px] w-16 flex-row items-center justify-between lg:h-[300px] lg:w-16 lg:flex-col">
+          <div className="order-2 mx-auto flex w-full items-center justify-center lg:h-full lg:w-auto">
+            <div className="relative flex w-full max-w-[280px] items-center justify-between px-2 sm:max-w-[340px] sm:px-4 lg:h-[300px] lg:w-16 lg:max-w-none lg:flex-col lg:px-0">
               <div className="absolute left-4 right-4 top-1/2 h-[2px] -translate-y-1/2 bg-white/25 lg:left-1/2 lg:right-auto lg:top-4 lg:h-[calc(100%-32px)] lg:w-[2px] lg:-translate-x-1/2 lg:translate-y-0" />
 
               {products.map((item) => {
@@ -60,10 +63,10 @@ export function ProductsSection() {
                     key={item.id}
                     type="button"
                     onClick={() => setActiveId(item.id)}
-                    className="relative z-10 flex h-7 w-7 items-center justify-center rounded-full border-2 border-white transition-transform duration-200 hover:scale-110 md:h-8 md:w-8"
+                    className="relative z-10 flex h-8 w-8 items-center justify-center rounded-full border-2 border-white transition duration-200 hover:scale-110 sm:h-9 sm:w-9"
                     style={{
                       backgroundColor: item.accent,
-                      boxShadow: isActive ? "0 0 0 6px rgba(255,255,255,0.12)" : "none",
+                      boxShadow: isActive ? "0 0 0 6px rgba(255,255,255,0.14)" : "none",
                     }}
                     aria-label={item.name}
                     title={item.name}
@@ -76,12 +79,12 @@ export function ProductsSection() {
           </div>
 
           <div className="order-3">
-            <p className="text-center text-xs font-semibold uppercase tracking-[0.16em] text-white/65 lg:text-left">
+            <p className="text-center text-[11px] font-semibold uppercase tracking-[0.16em] text-white/65 sm:text-xs lg:text-left">
               Selected pathway
             </p>
 
             <div className="mt-4 flex justify-center lg:justify-start">
-              <div className="flex h-[72px] w-full max-w-[160px] items-center md:h-[88px] md:max-w-[200px] lg:h-[100px] lg:max-w-[240px]">
+              <div className="flex h-[56px] w-full max-w-[140px] items-center sm:h-[68px] sm:max-w-[170px] md:h-[82px] md:max-w-[200px] lg:h-[96px] lg:max-w-[230px]">
                 <SmartImage
                   key={`${activeProduct.id}-title`}
                   src={activeProduct.titleImage}
@@ -94,18 +97,18 @@ export function ProductsSection() {
               </div>
             </div>
 
-            <p className="mt-6 max-w-2xl text-center text-base leading-8 text-white/92 md:text-lg md:leading-9 lg:text-left">
+            <p className="mx-auto mt-5 max-w-2xl text-center text-sm leading-7 text-white/92 sm:text-base sm:leading-8 md:mt-6 md:text-lg md:leading-9 lg:mx-0 lg:text-left">
               {activeProduct.description}
             </p>
 
-            <p className="mt-4 max-w-2xl text-center text-sm leading-7 text-white/72 md:text-base md:leading-8 lg:text-left">
+            <p className="mx-auto mt-4 max-w-2xl text-center text-sm leading-6 text-white/72 sm:leading-7 md:text-base md:leading-8 lg:mx-0 lg:text-left">
               {activeProduct.extra}
             </p>
 
-            <div className="mt-8 flex justify-center lg:justify-start">
+            <div className="mt-7 flex justify-center lg:justify-start">
               <button
                 type="button"
-                className="rounded-full bg-white px-6 py-3 text-sm font-bold text-slate-900 shadow-xl transition hover:-translate-y-0.5"
+                className="rounded-full bg-white px-5 py-3 text-sm font-bold text-slate-900 shadow-xl transition hover:-translate-y-0.5 sm:px-6"
               >
                 Explore more
               </button>
