@@ -25,6 +25,9 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Debug remote dir
+        run: echo "${{ secrets.FTP_REMOTE_DIR }}"
+
       - name: FTP Deployment
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
