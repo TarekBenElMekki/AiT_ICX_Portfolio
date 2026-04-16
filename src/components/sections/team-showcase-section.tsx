@@ -5,17 +5,17 @@ const teamMembers = [
   {
     name: "Oumayma Guesmi",
     role: "MCVP CXO",
-    image: "/assets/branding/person-1.svg",
+    image: "/assets/branding/person-1.jpg",
   },
   {
     name: "Tarek Ben El Mekki",
     role: "Developer",
-    image: "/assets/branding/person-2.svg",
+    image: "/assets/branding/person-2.png",
   },
   {
     name: "Yahya Ben Younes",
     role: "UI/UX Designer",
-    image: "/assets/branding/person-3.svg",
+    image: "/assets/branding/person-3.jpg",
   },
 ];
 
