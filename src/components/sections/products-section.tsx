@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useMemo, useState } from "react";
 import { products } from "@/data/site-data";
@@ -106,12 +106,7 @@ export function ProductsSection() {
             </p>
 
             <div className="mt-7 flex justify-center lg:justify-start">
-              <button
-                type="button"
-                className="rounded-full bg-white px-5 py-3 text-sm font-bold text-slate-900 shadow-xl transition hover:-translate-y-0.5 sm:px-6"
-              >
-                Explore more
-              </button>
+              
             </div>
           </div>
         </div>

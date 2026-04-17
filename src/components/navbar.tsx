@@ -19,7 +19,7 @@ export function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#0d2a5c]/20 backdrop-blur-md">
       <div className="section-shell flex h-16 items-center justify-between md:h-[72px]">
-        <a href="#" className="flex items-center">
+        <a href="https://lookerstudio.google.com/u/0/reporting/4ee85e76-8824-43a3-b9b5-eba97bf36cef/page/p_cl2n6a8ayd" className="flex items-center">
           <SmartImage
             src="/assets/products/Logo_HereTunisia.svg"
             alt="Here Tunisia logo"
@@ -44,7 +44,7 @@ export function Navbar() {
         </nav>
 
         <div className="hidden xl:block">
-          <a href="#products" className="rounded-full bg-white px-4 py-2 text-[13px] font-bold text-[#0d2a5c] transition hover:-translate-y-0.5">
+          <a href="https://lookerstudio.google.com/u/0/reporting/4ee85e76-8824-43a3-b9b5-eba97bf36cef/page/p_cl2n6a8ayd" className="rounded-full bg-white px-4 py-2 text-[13px] font-bold text-[#0d2a5c] transition hover:-translate-y-0.5">
             Explore
           </a>
         </div>
@@ -73,7 +73,7 @@ export function Navbar() {
               </a>
             ))}
             <a
-              href="#products"
+              href="https://lookerstudio.google.com/u/0/reporting/4ee85e76-8824-43a3-b9b5-eba97bf36cef/page/p_cl2n6a8ayd"
               className="mt-2 rounded-xl bg-white px-4 py-3 text-sm font-bold text-[#0d2a5c]"
               onClick={() => setOpen(false)}
             >
@@ -85,3 +85,4 @@ export function Navbar() {
     </header>
   );
 }
+
